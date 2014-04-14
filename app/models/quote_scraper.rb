@@ -8,7 +8,7 @@ class QuoteScraper
 
 		# Do funky things with it using Nokogiri::XML::Node methods...
 		# Search for nodes by css
-		#we used '.bqQuoteLink' to grab the quotes in the boxes, because the quotes all have this CSS element
+		#we used '.bqQuoteLink' to grab the quotes in the boxes, because the quotes all have this CSS element then a is the link within the boxes
 		quotes =[]
 		doc.css('.bqQuoteLink a').each do |quote|
  			quotes << quote.inner_html
